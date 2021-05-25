@@ -1,0 +1,58 @@
+.grid-container {
+   display: grid;
+   background-color: black; 
+   height: 600px;
+   width: 360px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin: -300px 0 0 -180px;
+   border-radius: 2%;
+   grid-template-rows: 135px repeat(5, 1fr);
+   grid-template-columns: repeat(4, 1fr);
+   row-gap: 4px;
+   font-family: "Helvetica";
+   flex-wrap: wrap;
+}
+
+#display {
+    grid-column: span 4;
+    max-width: 350px;
+    filter:blur(0px);
+    color:white;
+    font-size: 60px;
+    text-align:right;
+    align-self: flex-end;
+    font-weight:100;
+}
+
+#zero {
+    grid-column: span 2;
+    border-radius: 35px;
+}
+
+button {
+    border-radius:100%;
+    box-shadow: none;
+    border: 0;
+    margin:6px;
+    font-size: 33px;
+    font-weight:545;
+    color: white;
+}
+
+.top-buttons {
+    background-color: rgb(170, 170, 170);
+    color: black;
+}
+
+.operator {
+    background-color: rgb(236, 155, 33);
+    font-size: 42px;
+}
+
+.number {
+    background-color:dimgrey;
+}
+
+
