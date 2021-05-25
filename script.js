@@ -3,6 +3,7 @@ const btnPlusMinus = document.getElementById('plus-minus');
 const btnPercent = document.getElementById('percent');
 const selectedNumber = document.querySelectorAll('.number');
 const selectedOperator = document.querySelectorAll('.operator');
+const buttons = document.querySelectorAll('button');
 
 let displayedNum = "0"
 let firstNum = ""
@@ -107,13 +108,20 @@ function clear() {
 }
 
 function plusMinus() {
+    if(displayedNum == "0"){
+        displayedNum = "-";
+        updateDisplay(displayedNum);
+        return displayedNum;
+    }
     displayedNum *= -1;
+    displayedNum = displayedNum.toString()
     updateDisplay(displayedNum);
     return displayedNum;
 }
 
 function convertToPercent() {
     displayedNum /= 100;
+    displayedNum = displayedNum.toString()
     updateDisplay(displayedNum);
     return displayedNum
 }
@@ -127,8 +135,8 @@ function updateDisplay(displayedNum) {
     } else {
         display.style.filter = "blur(0px)"
     }
-    
 }
+
 
 btnClear.addEventListener('click', clear);
 btnPlusMinus.addEventListener('click', plusMinus);

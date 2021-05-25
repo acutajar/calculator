@@ -39,7 +39,14 @@ button {
     font-size: 33px;
     font-weight:545;
     color: white;
+    transition: 0s;
 }
+
+button:hover {
+    transition: .2s;
+    transform: scale(1.1);
+}
+
 
 .top-buttons {
     background-color: rgb(170, 170, 170);
